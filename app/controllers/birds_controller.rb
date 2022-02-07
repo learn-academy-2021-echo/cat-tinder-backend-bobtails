@@ -9,13 +9,6 @@ class BirdsController < ApplicationController
       render json: bird
     end
 
-    def update
-      
-    end
-
-    def destroy
-    end
-
   private
   def bird_params
     params.require(:bird).permit(:name, :age, :enjoys, :image)
