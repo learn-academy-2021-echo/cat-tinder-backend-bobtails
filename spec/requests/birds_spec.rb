@@ -37,36 +37,36 @@ end
       expect(bird.image).to eq('http')
     end
   end
-  describe "PATCH /update" do
-    it 'updates a bird' do
-      bird_params = {
-           bird: {
-          name: 'Lenny',
-          age: 3,
-          enjoys: 'tweeting',
-          image: 'http'
-        }
-      }
-      post '/birds', params: bird_params
+  # describe "PATCH /update" do
+  #   it 'updates a bird' do
+  #     bird_params = {
+  #          bird: {
+  #         name: 'Lenny',
+  #         age: 3,
+  #         enjoys: 'tweeting',
+  #         image: 'http'
+  #       }
+  #     }
+  #     post '/birds', params: bird_params
 
-      bird_params = {
-        bird: {
-       name: 'Hobo',
-       age: 13,
-       enjoys: 'eating out',
-       image: 'https://'
-     }
-   }
-   patch '/birds/:id', params: bird_params
+  #     bird_params = {
+  #       bird: {
+  #      name: 'Hobo',
+  #      age: 13,
+  #      enjoys: 'eating out',
+  #      image: 'https://'
+  #    }
+  #  }
+  #  patch '/birds/:id', params: bird_params
 
 
-      expect(response).to have_http_status(200)
-      bird = Bird.first
+  #     expect(response).to have_http_status(200)
+  #     bird = Bird.first
   
-      expect(bird.name).to eq('Hobo')
-      expect(bird.age).to eq(13)
-      expect(bird.enjoys).to eq('eating out')
-      expect(bird.image).to eq('https://')
-    end 
-  end
+  #     expect(bird.name).to eq('Hobo')
+  #     expect(bird.age).to eq(13)
+  #     expect(bird.enjoys).to eq('eating out')
+  #     expect(bird.image).to eq('https://')
+  #   end 
+  # end
 end
