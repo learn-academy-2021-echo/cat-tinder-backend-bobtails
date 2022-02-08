@@ -19,10 +19,10 @@ end
   describe "POST /create" do
     it 'creates a bird' do
       bird_params = {
-           bird: {
+           bird: {  
           name: 'Lenny',
           age: 3,
-          enjoys: 'tweeting his ass off',
+          enjoys: 'tweeting his bleep off',
           image: 'http'
         }
       }
@@ -33,40 +33,41 @@ end
   
       expect(bird.name).to eq('Lenny')
       expect(bird.age).to eq(3)
-      expect(bird.enjoys).to eq('tweeting his ass off')
+      expect(bird.enjoys).to eq('tweeting his bleep off')
       expect(bird.image).to eq('http')
     end
   end
+
   # describe "PATCH /update" do
   #   it 'updates a bird' do
   #     bird_params = {
   #          bird: {
   #         name: 'Lenny',
   #         age: 3,
-  #         enjoys: 'tweeting',
+  #         enjoys: 'tweeting about stuff',
   #         image: 'http'
   #       }
   #     }
   #     post '/birds', params: bird_params
-
-  #     bird_params = {
-  #       bird: {
-  #      name: 'Hobo',
-  #      age: 13,
-  #      enjoys: 'eating out',
-  #      image: 'https://'
-  #    }
-  #  }
-  #  patch '/birds/:id', params: bird_params
-
-
-  #     expect(response).to have_http_status(200)
+  #     Bird.create(bird_params)
   #     bird = Bird.first
-  
-  #     expect(bird.name).to eq('Hobo')
-  #     expect(bird.age).to eq(13)
-  #     expect(bird.enjoys).to eq('eating out')
-  #     expect(bird.image).to eq('https://')
+  #     updated_bird = {
+  #      name: 'Hobobobo',
+  #      age: 13,
+  #      enjoys: 'eating out like a champ',
+  #      image: 'https'
+  #    }
+  #    updated_bird_params = {bird: updated_bird}
+  #    patch "/birds/#{bird.id}", params: updated_bird_params
+  #    bird_2 = Bird.first
+  #    bird_2.update(updated_bird)
+  #    bird_2 = Bird.first
+
+  #  expect(response).to have_http_status(200)
+  #  expect(bird2.name).to eq updated_bird_params[:name]
+  #  expect(bird2.age).to eq updated_bird_params[:age]
+  #  expect(bird2.enjoys).to eq updated_bird_params[:enjoys]
+  #  expect(bird2.image).to eq updated_bird_params[:image]
   #   end 
   # end
 
