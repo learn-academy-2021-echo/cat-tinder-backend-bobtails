@@ -6,7 +6,11 @@ class BirdsController < ApplicationController
 
     def create
       bird = Bird.create(bird_params)
-      render json: bird
+      if bird.valid?
+        render json: bird
+       else
+         render json: bird.errors, status: 422
+       end
     end
 
   private
