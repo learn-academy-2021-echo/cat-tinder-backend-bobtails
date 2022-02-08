@@ -9,10 +9,10 @@
 birds = [
   {
     id: 1,
-    name: "Blake",
+    name: "Shelby",
     age: 18,
     enjoys: "late night feather ruffling",
-    image:"https://i.pinimg.com/originals/16/66/51/166651081286be1dd69920c27e89658d.jpg"
+    image:"https://funnyness.com/sites/default/files/images/i/10-2020/funny-bird-wear-lipstick.jpg"
     
   },
   {
@@ -21,7 +21,7 @@ birds = [
     age: 8,
     enjoys: "having his name pronounced correctly!",
     image:
-      "https://i.pinimg.com/originals/14/e6/34/14e63434d7adeb7c87c35fb3b7f49d0d.png",
+      "https://funnyness.com/sites/default/files/images/i/07-2019/funny-birds-glasses.jpg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ birds = [
     age: 12,
     enjoys: "staring into your soul",
     image:
-      "https://www.pinkvilla.com/imageresize/avengers-endgame-star-mark-ruffalo-celebrates-bruce-banners-50th-birthday-with-an-endearing-post.jpg?width=752&format=webp&t=pvorg",
+      "http://4.bp.blogspot.com/-Psk4t610Vc0/To-xxwXEmqI/AAAAAAAAARI/sw6xWb24In4/s1600/Funny+Bird.jpg",
   },
 ];
 

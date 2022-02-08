@@ -13,9 +13,18 @@ class BirdsController < ApplicationController
        end
     end
 
+    def update
+      bird = Bird.find(params[:id])
+      bird.update(bird_params)
+      if bird.valid?
+        render json: bird
+       else
+         render json: bird.errors, status: 422
+       end
+    end
+
   private
   def bird_params
     params.require(:bird).permit(:name, :age, :enjoys, :image)
   end
-
 end
